@@ -12,7 +12,7 @@ public class JAWABAN03 {
         public static void main(String[] args) {
             String[] businfo = {"01-TopLevel", "02-MiddleLevel", "03-RegularStaff", "04-Staff"};
 
-            for (int i=0; i <200; i++){
+            for (int i=0; i <200; i++) {
                 NIK();
             }
         }
@@ -46,6 +46,25 @@ public class JAWABAN03 {
                 System.out.println("NIK tidak valid");
 
             }
+            static void NIK() {
+
+                Scanner inputReg = new Scanner(System.in);
+                System.out.println("masukan nik registrasi");
+                String NIK = inputReg.nextLine();
+
+                CekNIKPegawaiKFC(nik);
+
+                if (success) {
+                    printresult();
+                }
+            }
+            static void printresult(){
+                System.out.println("jum;ah penumpang bus 01-TopLevel = " + JumlahTopLevel);
+                System.out.println("jumlah penumpang bus 02-MidLevel = " + JumlahMiddleLevel);
+                System.out.println("Jumlah penumpang bus 03-RegStaff = " + JumlahRegularStaff);
+                System.out.println("Jumlah penumpang bus 04-Staff = " + JumlahStaff);
+            }
+
             }
         }
     }
